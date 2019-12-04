@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6580FFD4973B214CCB9858 /* Pods_BitValueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516C6A7524078DCBD2C94A2A /* Pods_BitValueTests.framework */; };
 		5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D010239833A300ED5000 /* AppDelegate.swift */; };
 		5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D012239833A300ED5000 /* SceneDelegate.swift */; };
 		5C37D015239833A300ED5000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D014239833A300ED5000 /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D019239833A500ED5000 /* Assets.xcassets */; };
 		5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */; };
 		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
+		B62B8D9F8BE537E975ED7E78 /* Pods_BitValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3619E5EA0DB16556F65F5738 /* Pods-BitValue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValue.release.xcconfig"; path = "Target Support Files/Pods-BitValue/Pods-BitValue.release.xcconfig"; sourceTree = "<group>"; };
+		516C6A7524078DCBD2C94A2A /* Pods_BitValueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitValueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C5C5FD04C4C80C9BFD67FC /* Pods-BitValue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValue.debug.xcconfig"; path = "Target Support Files/Pods-BitValue/Pods-BitValue.debug.xcconfig"; sourceTree = "<group>"; };
 		5C37D00D239833A300ED5000 /* BitValue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitValue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37D010239833A300ED5000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C37D012239833A300ED5000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		5C37D023239833A500ED5000 /* BitValueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitValueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37D027239833A500ED5000 /* BitValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitValueTests.swift; sourceTree = "<group>"; };
 		5C37D029239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.debug.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitValue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.release.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62B8D9F8BE537E975ED7E78 /* Pods_BitValue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6580FFD4973B214CCB9858 /* Pods_BitValueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C6D0A017F1732849E9EC11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52C5C5FD04C4C80C9BFD67FC /* Pods-BitValue.debug.xcconfig */,
+				3619E5EA0DB16556F65F5738 /* Pods-BitValue.release.xcconfig */,
+				66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */,
+				C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5C37D004239833A300ED5000 = {
 			isa = PBXGroup;
 			children = (
 				5C37D00F239833A300ED5000 /* BitValue */,
 				5C37D026239833A500ED5000 /* BitValueTests */,
 				5C37D00E239833A300ED5000 /* Products */,
+				04C6D0A017F1732849E9EC11 /* Pods */,
+				B13DDB730E7A1286B20E60C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,15 @@
 			path = BitValueTests;
 			sourceTree = "<group>";
 		};
+		B13DDB730E7A1286B20E60C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */,
+				516C6A7524078DCBD2C94A2A /* Pods_BitValueTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C37D02C239833A500ED5000 /* Build configuration list for PBXNativeTarget "BitValue" */;
 			buildPhases = (
+				4A544316AAE4BDEEB2790B5B /* [CP] Check Pods Manifest.lock */,
 				5C37D009239833A300ED5000 /* Sources */,
 				5C37D00A239833A300ED5000 /* Frameworks */,
 				5C37D00B239833A300ED5000 /* Resources */,
@@ -123,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C37D02F239833A500ED5000 /* Build configuration list for PBXNativeTarget "BitValueTests" */;
 			buildPhases = (
+				ECCC02B119028B9643C8783D /* [CP] Check Pods Manifest.lock */,
 				5C37D01F239833A500ED5000 /* Sources */,
 				5C37D020239833A500ED5000 /* Frameworks */,
 				5C37D021239833A500ED5000 /* Resources */,
@@ -194,6 +229,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A544316AAE4BDEEB2790B5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitValue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCC02B119028B9643C8783D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitValueTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C37D009239833A300ED5000 /* Sources */ = {
@@ -360,6 +442,7 @@
 		};
 		5C37D02D239833A500ED5000 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C5C5FD04C4C80C9BFD67FC /* Pods-BitValue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +461,7 @@
 		};
 		5C37D02E239833A500ED5000 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3619E5EA0DB16556F65F5738 /* Pods-BitValue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +480,7 @@
 		};
 		5C37D030239833A500ED5000 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +503,7 @@
 		};
 		5C37D031239833A500ED5000 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

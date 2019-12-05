@@ -11,7 +11,6 @@
 		5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D010239833A300ED5000 /* AppDelegate.swift */; };
 		5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D012239833A300ED5000 /* SceneDelegate.swift */; };
 		5C37D015239833A300ED5000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D014239833A300ED5000 /* ViewController.swift */; };
-		5C37D018239833A300ED5000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D016239833A300ED5000 /* Main.storyboard */; };
 		5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D019239833A500ED5000 /* Assets.xcassets */; };
 		5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */; };
 		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
@@ -36,7 +35,6 @@
 		5C37D010239833A300ED5000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C37D012239833A300ED5000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C37D014239833A300ED5000 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C37D017239833A300ED5000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C37D019239833A500ED5000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C37D01C239833A500ED5000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C37D01E239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */,
 				C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,7 +103,6 @@
 				5C37D010239833A300ED5000 /* AppDelegate.swift */,
 				5C37D012239833A300ED5000 /* SceneDelegate.swift */,
 				5C37D014239833A300ED5000 /* ViewController.swift */,
-				5C37D016239833A300ED5000 /* Main.storyboard */,
 				5C37D019239833A500ED5000 /* Assets.xcassets */,
 				5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */,
 				5C37D01E239833A500ED5000 /* Info.plist */,
@@ -217,7 +213,6 @@
 			files = (
 				5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */,
 				5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */,
-				5C37D018239833A300ED5000 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +302,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5C37D016239833A300ED5000 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C37D017239833A300ED5000 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -455,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victorpereira.BitValue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.victorpereira.BitValue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

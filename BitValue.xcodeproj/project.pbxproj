@@ -10,10 +10,14 @@
 		0D6580FFD4973B214CCB9858 /* Pods_BitValueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516C6A7524078DCBD2C94A2A /* Pods_BitValueTests.framework */; };
 		5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D010239833A300ED5000 /* AppDelegate.swift */; };
 		5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D012239833A300ED5000 /* SceneDelegate.swift */; };
-		5C37D015239833A300ED5000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D014239833A300ED5000 /* ViewController.swift */; };
 		5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D019239833A500ED5000 /* Assets.xcassets */; };
 		5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */; };
 		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
+		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
+		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
+		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
+		5CA87E332399D531003B20C7 /* PriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E322399D531003B20C7 /* PriceViewModel.swift */; };
+		5CA87E362399DD61003B20C7 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */; };
 		B62B8D9F8BE537E975ED7E78 /* Pods_BitValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +38,17 @@
 		5C37D00D239833A300ED5000 /* BitValue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitValue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37D010239833A300ED5000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C37D012239833A300ED5000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C37D014239833A300ED5000 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C37D019239833A500ED5000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C37D01C239833A500ED5000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C37D01E239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C37D023239833A500ED5000 /* BitValueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitValueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37D027239833A500ED5000 /* BitValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitValueTests.swift; sourceTree = "<group>"; };
 		5C37D029239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
+		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
+		5CA87E322399D531003B20C7 /* PriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModel.swift; sourceTree = "<group>"; };
+		5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.debug.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitValue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.release.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,12 +108,14 @@
 		5C37D00F239833A300ED5000 /* BitValue */ = {
 			isa = PBXGroup;
 			children = (
+				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
+				5CA87E202399CCC4003B20C7 /* priceCell */,
 				5C37D010239833A300ED5000 /* AppDelegate.swift */,
 				5C37D012239833A300ED5000 /* SceneDelegate.swift */,
-				5C37D014239833A300ED5000 /* ViewController.swift */,
 				5C37D019239833A500ED5000 /* Assets.xcassets */,
 				5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */,
 				5C37D01E239833A500ED5000 /* Info.plist */,
+				5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */,
 			);
 			path = BitValue;
 			sourceTree = "<group>";
@@ -117,6 +127,16 @@
 				5C37D029239833A500ED5000 /* Info.plist */,
 			);
 			path = BitValueTests;
+			sourceTree = "<group>";
+		};
+		5CA87E202399CCC4003B20C7 /* priceCell */ = {
+			isa = PBXGroup;
+			children = (
+				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
+				5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */,
+				5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */,
+			);
+			path = priceCell;
 			sourceTree = "<group>";
 		};
 		B13DDB730E7A1286B20E60C3 /* Frameworks */ = {
@@ -211,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */,
 				5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */,
 				5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */,
 			);
@@ -277,8 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C37D015239833A300ED5000 /* ViewController.swift in Sources */,
+				5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */,
+				5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */,
 				5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */,
+				5CA87E362399DD61003B20C7 /* UITableViewCellExtension.swift in Sources */,
+				5CA87E332399D531003B20C7 /* PriceViewModel.swift in Sources */,
 				5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

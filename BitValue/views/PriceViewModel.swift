@@ -21,11 +21,11 @@ class PriceViewModel {
     }
 }
 
-extension PriceViewModel {
+extension PriceViewModel: PriceViewModelProtocol, HighlightedPriceViewModelProtocol {
     
     var dateString: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         
         return dateFormatter.string(from: date)
     }

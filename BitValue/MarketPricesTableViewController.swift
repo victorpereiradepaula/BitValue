@@ -24,24 +24,60 @@ class MarketPricesTableViewController: UITableViewController {
     }
     
     private func setupTableView() {
+        tableView.backgroundColor = .backgroundColor
+        tableView.register(UINib(nibName: HighlightedPriceTableViewCell.nibName, bundle: Bundle(for: HighlightedPriceTableViewCell.self)), forCellReuseIdentifier: HighlightedPriceTableViewCell.nibName)
         tableView.register(UINib(nibName: PriceTableViewCell.nibName, bundle: Bundle(for: PriceTableViewCell.self)), forCellReuseIdentifier: PriceTableViewCell.nibName)
     }
 }
 
 // MARK: - Table view data source
 extension MarketPricesTableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
+        let numberOfRows: Int
+        
+        switch section {
+        case 0:
+            numberOfRows = 1
+            
+        case 1:
+            numberOfRows = viewModels.count - 1
+            
+        default:
+            numberOfRows = 0
+        }
+        
+        return numberOfRows
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.nibName, for: indexPath) as! PriceTableViewCell
-        cell.populate(with: viewModels[indexPath.row])
-        return cell
+        
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HighlightedPriceTableViewCell.nibName, for: indexPath) as! HighlightedPriceTableViewCell
+             cell.populate(with: viewModels[0])
+             return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.nibName, for: indexPath) as! PriceTableViewCell
+             cell.populate(with: viewModels[indexPath.row + 1])
+             return cell
+            
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    // MARK: - TODO
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        UIView()
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 final class PriceViewModel {
     
-    private let date: Date
+    let date: Date
     let value: Double
     let unit: String
     

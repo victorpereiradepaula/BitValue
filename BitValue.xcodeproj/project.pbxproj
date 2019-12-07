@@ -17,6 +17,7 @@
 		5C70CF97239A780400CE2E27 /* MarketPricesChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */; };
 		5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53C239C05030066DBE4 /* PriceDBController.swift */; };
 		5C77B540239C09D90066DBE4 /* PriceDBControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */; };
+		5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -59,6 +60,7 @@
 		5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketPricesChartTableViewCell.xib; sourceTree = "<group>"; };
 		5C77B53C239C05030066DBE4 /* PriceDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBController.swift; sourceTree = "<group>"; };
 		5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBControllerTests.swift; sourceTree = "<group>"; };
+		5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesViewModel.swift; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -130,11 +132,10 @@
 		5C37D00F239833A300ED5000 /* BitValue */ = {
 			isa = PBXGroup;
 			children = (
+				5C77B544239C16CD0066DBE4 /* util */,
 				5CEE2821239B72A6006C6673 /* data */,
-				5CEE281C239B4455006C6673 /* formatters */,
-				5CA87E3C2399DEFD003B20C7 /* extensions */,
+				5C77B543239C16AF0066DBE4 /* viewModels */,
 				5CA87E3D2399DF0C003B20C7 /* views */,
-				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
 				5C37D010239833A300ED5000 /* AppDelegate.swift */,
 				5C37D012239833A300ED5000 /* SceneDelegate.swift */,
 				5C37D019239833A500ED5000 /* Assets.xcassets */,
@@ -161,6 +162,24 @@
 				5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */,
 			);
 			path = marketPricesChartCell;
+			sourceTree = "<group>";
+		};
+		5C77B543239C16AF0066DBE4 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */,
+				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		5C77B544239C16CD0066DBE4 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5CA87E3C2399DEFD003B20C7 /* extensions */,
+				5CEE281C239B4455006C6673 /* formatters */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		5CA87E202399CCC4003B20C7 /* priceCell */ = {
@@ -194,10 +213,10 @@
 			isa = PBXGroup;
 			children = (
 				5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */,
-				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
 				5CA87E372399DE33003B20C7 /* highlightedPriceCell */,
 				5C70CF8F239A771E00CE2E27 /* marketPricesChartCell */,
 				5CA87E202399CCC4003B20C7 /* priceCell */,
+				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -435,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */,
 				5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */,
 				5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */,
 				5CEE281E239B4470006C6673 /* DateValueFormatter.swift in Sources */,

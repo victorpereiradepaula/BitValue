@@ -10,13 +10,13 @@ import UIKit
 
 final class MarketPricesTableViewController: UITableViewController {
     
-    let viewModels: [PriceViewModel] = [
+    let marketPricesViewModel = MarketPricesViewModel(pricesViewModels: [
         PriceViewModel(date: Date(timeIntervalSince1970: 1544054400), value: 7656.995),
         PriceViewModel(date: Date(timeIntervalSince1970: 1544400000), value: 7360.544166666667),
         PriceViewModel(date: Date(timeIntervalSince1970: 1544745600), value: 7307.416666666668),
         PriceViewModel(date: Date(timeIntervalSince1970: 1545091200), value: 7314.758333333335),
         PriceViewModel(date: Date(timeIntervalSince1970: 1545436800), value: 7288.243333333335)
-    ]
+    ])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +44,14 @@ final class MarketPricesTableViewController: UITableViewController {
     }
     
     // MARK: - TODO
-//    private func setupTableViewHeader(title: String) -> UIView {
-//        let label = UILabel()
-//        label.text = title
-//        label.textColor = .orange
-//        label.backgroundColor = .black
-//        label.inset
-//        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-//        return label
-//    }
+    private func setupTableViewHeader(title: String?) -> UIView {
+        let label = UILabel()
+        label.text = title
+        label.textColor = .orange
+        label.backgroundColor = .black
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return label
+    }
     
     @objc private func refreshData() {
         
@@ -63,24 +62,11 @@ final class MarketPricesTableViewController: UITableViewController {
 extension MarketPricesTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return marketPricesViewModel.numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRows: Int
-        
-        switch section {
-        case 0, 1:
-            numberOfRows = 1
-            
-        case 2:
-            numberOfRows = viewModels.count - 1
-            
-        default:
-            numberOfRows = 0
-        }
-        
-        return numberOfRows
+        return marketPricesViewModel.numberOfRows(at: section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,17 +74,17 @@ extension MarketPricesTableViewController {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HighlightedPriceTableViewCell.nibName, for: indexPath) as? HighlightedPriceTableViewCell else { return UITableViewCell() }
-            cell.populate(with: viewModels[0])
+            cell.populate(with: marketPricesViewModel.sections[indexPath.section][indexPath.row])
             return cell
             
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MarketPricesChartTableViewCell.nibName, for: indexPath) as? MarketPricesChartTableViewCell else { return UITableViewCell() }
-            cell.populate(with: viewModels)
+            cell.populate(with: marketPricesViewModel.sections[indexPath.section])
             return cell
             
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.nibName, for: indexPath) as? PriceTableViewCell else { return UITableViewCell() }
-            cell.populate(with: viewModels[indexPath.row + 1])
+            cell.populate(with: marketPricesViewModel.sections[indexPath.section][indexPath.row])
             return cell
             
         default:
@@ -107,20 +93,10 @@ extension MarketPricesTableViewController {
     }
     
     // MARK: - TODO
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        switch section {
-//        case 0:
-//            return setupTableViewHeader(title: "Última cotação")
-//            
-//        case 1:
-//            return setupTableViewHeader(title: "Cotaão média dos últimos 7 dias")
-//            
-//        case 2:
-//            return setupTableViewHeader(title: "Mais cotações")
-//        default:
-//            return nil
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerTitle = marketPricesViewModel.headerTitle(at: section)
+        return setupTableViewHeader(title: headerTitle)
+    }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         UIView()

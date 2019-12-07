@@ -11,6 +11,6 @@ import UIKit
 extension UIColor {
     
     static var backgroundColor: UIColor {
-        UIColor(red: 0.12, green: 0.13, blue: 0.14, alpha: 1)
+        UIColor(named: "backgroundColor") ?? .darkGray
     }
 }

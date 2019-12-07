@@ -8,15 +8,28 @@
 
 import UIKit
 
+protocol MarketPricesTableViewControllerProtocol {
+    
+    var sections: [[PriceViewModel]] { get }
+    var numberOfSections: Int { get }
+    
+    func numberOfRows(at section: Int) -> Int
+    func headerTitle(at section: Int) -> String?
+}
+
 final class MarketPricesTableViewController: UITableViewController {
     
-    let marketPricesViewModel = MarketPricesViewModel(pricesViewModels: [
-        PriceViewModel(date: Date(timeIntervalSince1970: 1544054400), value: 7656.995),
-        PriceViewModel(date: Date(timeIntervalSince1970: 1544400000), value: 7360.544166666667),
-        PriceViewModel(date: Date(timeIntervalSince1970: 1544745600), value: 7307.416666666668),
-        PriceViewModel(date: Date(timeIntervalSince1970: 1545091200), value: 7314.758333333335),
-        PriceViewModel(date: Date(timeIntervalSince1970: 1545436800), value: 7288.243333333335)
-    ])
+    let marketPricesViewModel: MarketPricesTableViewControllerProtocol
+    
+    init(marketPricesViewModel: MarketPricesTableViewControllerProtocol) {
+        self.marketPricesViewModel = marketPricesViewModel
+        super.init(style: UITableView.Style.grouped)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.marketPricesViewModel = MarketPricesViewModel(pricesViewModels: [])
+        super .init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,6 +24,9 @@ final class MarketPricesViewModel {
             sections.append(Array(sortedViewModels.dropFirst()))
         }
     }
+}
+
+extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
     
     var numberOfSections: Int {
         sections.count

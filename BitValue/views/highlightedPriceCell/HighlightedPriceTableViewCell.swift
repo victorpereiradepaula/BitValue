@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HighlightedPriceViewModelProtocol {
-    var dateString: String { get }
+    var completeDateString: String { get }
     var unit: String { get }
     var valueString: String { get }
 }
@@ -36,7 +36,7 @@ final class HighlightedPriceTableViewCell: BaseTableViewCell {
     }
     
     func populate(with viewModel: HighlightedPriceViewModelProtocol) {
-        dateLabel.text = viewModel.dateString
+        dateLabel.text = viewModel.completeDateString
         unitLabel.text = viewModel.unit
         valueLabel.text = viewModel.valueString
     }

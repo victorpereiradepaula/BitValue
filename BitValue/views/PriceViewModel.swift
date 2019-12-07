@@ -8,10 +8,10 @@
 
 import Foundation
 
-class PriceViewModel {
+final class PriceViewModel {
     
     private let date: Date
-    private let value: Double
+    let value: Double
     let unit: String
     
     init(date: Date, value: Double, unit: String = "USD") {
@@ -21,7 +21,24 @@ class PriceViewModel {
     }
 }
 
-extension PriceViewModel: PriceViewModelProtocol, HighlightedPriceViewModelProtocol {
+extension PriceViewModel: HighlightedPriceViewModelProtocol {
+    
+    var completeDateString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EE, dd MMM yyyy HH:mm"
+        
+        return dateFormatter.string(from: date)
+    }
+}
+
+extension PriceViewModel: PriceChartViewModelProtocol {
+    
+    var timeInterval: TimeInterval {
+        date.timeIntervalSince1970
+    }
+}
+
+extension PriceViewModel: PriceViewModelProtocol {
     
     var dateString: String {
         let dateFormatter = DateFormatter()

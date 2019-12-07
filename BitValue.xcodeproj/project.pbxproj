@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D019239833A500ED5000 /* Assets.xcassets */; };
 		5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */; };
 		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
+		5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */; };
+		5C70CF97239A780400CE2E27 /* MarketPricesChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -22,6 +24,8 @@
 		5CA87E3B2399DED8003B20C7 /* HighlightedPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E392399DED8003B20C7 /* HighlightedPriceTableViewCell.xib */; };
 		5CA87E412399E350003B20C7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E402399E350003B20C7 /* UIColorExtension.swift */; };
 		5CA87E432399F0D2003B20C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */; };
+		5CEE281B239B4434006C6673 /* PriceValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE281A239B4434006C6673 /* PriceValueFormatter.swift */; };
+		5CEE281E239B4470006C6673 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE281D239B4470006C6673 /* DateValueFormatter.swift */; };
 		B62B8D9F8BE537E975ED7E78 /* Pods_BitValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,8 @@
 		5C37D023239833A500ED5000 /* BitValueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitValueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37D027239833A500ED5000 /* BitValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitValueTests.swift; sourceTree = "<group>"; };
 		5C37D029239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesChartTableViewCell.swift; sourceTree = "<group>"; };
+		5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketPricesChartTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		5CA87E392399DED8003B20C7 /* HighlightedPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightedPriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E402399E350003B20C7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		5CEE281A239B4434006C6673 /* PriceValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceValueFormatter.swift; sourceTree = "<group>"; };
+		5CEE281D239B4470006C6673 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.debug.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitValue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.release.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		5C37D00F239833A300ED5000 /* BitValue */ = {
 			isa = PBXGroup;
 			children = (
+				5CEE281C239B4455006C6673 /* formatters */,
 				5CA87E3C2399DEFD003B20C7 /* extensions */,
 				5CA87E3D2399DF0C003B20C7 /* views */,
 				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
@@ -135,6 +144,15 @@
 				5C37D029239833A500ED5000 /* Info.plist */,
 			);
 			path = BitValueTests;
+			sourceTree = "<group>";
+		};
+		5C70CF8F239A771E00CE2E27 /* marketPricesChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */,
+				5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */,
+			);
+			path = marketPricesChartCell;
 			sourceTree = "<group>";
 		};
 		5CA87E202399CCC4003B20C7 /* priceCell */ = {
@@ -170,9 +188,19 @@
 				5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */,
 				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
 				5CA87E372399DE33003B20C7 /* highlightedPriceCell */,
+				5C70CF8F239A771E00CE2E27 /* marketPricesChartCell */,
 				5CA87E202399CCC4003B20C7 /* priceCell */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		5CEE281C239B4455006C6673 /* formatters */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE281A239B4434006C6673 /* PriceValueFormatter.swift */,
+				5CEE281D239B4470006C6673 /* DateValueFormatter.swift */,
+			);
+			path = formatters;
 			sourceTree = "<group>";
 		};
 		B13DDB730E7A1286B20E60C3 /* Frameworks */ = {
@@ -195,6 +223,7 @@
 				5C37D009239833A300ED5000 /* Sources */,
 				5C37D00A239833A300ED5000 /* Frameworks */,
 				5C37D00B239833A300ED5000 /* Resources */,
+				654EE73F6154188CC756258E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +298,7 @@
 			files = (
 				5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */,
 				5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */,
+				5C70CF97239A780400CE2E27 /* MarketPricesChartTableViewCell.xib in Resources */,
 				5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */,
 				5CA87E3B2399DED8003B20C7 /* HighlightedPriceTableViewCell.xib in Resources */,
 			);
@@ -306,6 +336,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		654EE73F6154188CC756258E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitValue/Pods-BitValue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitValue/Pods-BitValue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitValue/Pods-BitValue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ECCC02B119028B9643C8783D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,7 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */,
 				5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */,
+				5CEE281E239B4470006C6673 /* DateValueFormatter.swift in Sources */,
 				5CA87E3A2399DED8003B20C7 /* HighlightedPriceTableViewCell.swift in Sources */,
 				5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */,
 				5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */,
@@ -344,6 +393,7 @@
 				5CA87E362399DD61003B20C7 /* UITableViewCellExtension.swift in Sources */,
 				5CA87E332399D531003B20C7 /* PriceViewModel.swift in Sources */,
 				5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */,
+				5CEE281B239B4434006C6673 /* PriceValueFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -481,7 +531,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

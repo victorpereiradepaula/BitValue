@@ -87,17 +87,17 @@ extension MarketPricesTableViewController {
         
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: HighlightedPriceTableViewCell.nibName, for: indexPath) as! HighlightedPriceTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HighlightedPriceTableViewCell.nibName, for: indexPath) as? HighlightedPriceTableViewCell else { return UITableViewCell() }
             cell.populate(with: viewModels[0])
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MarketPricesChartTableViewCell.nibName, for: indexPath) as! MarketPricesChartTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MarketPricesChartTableViewCell.nibName, for: indexPath) as? MarketPricesChartTableViewCell else { return UITableViewCell() }
             cell.populate(with: viewModels)
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.nibName, for: indexPath) as! PriceTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.nibName, for: indexPath) as? PriceTableViewCell else { return UITableViewCell() }
             cell.populate(with: viewModels[indexPath.row + 1])
             return cell
             

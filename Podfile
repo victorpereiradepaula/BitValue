@@ -7,10 +7,13 @@ target 'BitValue' do
 
   # Pods for BitValue
   pod 'Charts'
+  pod 'RealmSwift'
+  pod 'SwiftLint'
 
   target 'BitValueTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RealmSwift'
   end
 
 end

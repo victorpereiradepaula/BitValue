@@ -84,7 +84,7 @@ extension PriceViewModel {
         return PriceViewModel(date: date, value: priceDB.value, unit: priceDB.unit)
     }
     
-    static func map(pricesDB: [PriceDB]) -> [PriceViewModel] {
+    static func mapArray(pricesDB: [PriceDB]) -> [PriceViewModel] {
         pricesDB.compactMap { map(priceDB: $0) }
     }
 }

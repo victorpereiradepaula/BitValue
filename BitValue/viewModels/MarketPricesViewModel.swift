@@ -7,35 +7,41 @@
 //
 
 import Foundation
+import Combine
 import RxSwift
 import RxCocoa
 
 final class MarketPricesViewModel {
     
+    private let marketPricesAPI = MarketPricesAPI()
     private let priceDBController = PriceDBController()
     private let reloadDataSubject = PublishSubject<Void>()
     private let alertSubject = PublishSubject<AlertViewModelProtocol?>()
     var sections: [[PriceViewModel]] = []
     
     init() {
-        loadSectionsFromDB()
+        refreshData()
     }
     
     private func loadSectionsFromDB() {
         sections = []
         
-        let pricesViewModels = PriceViewModel.map(pricesDB: priceDBController.getPricesDB())
+        let pricesViewModels = PriceViewModel.mapArray(pricesDB: priceDBController.getPricesDB())
         
-        let sortedViewModels = pricesViewModels.sorted(by: { $0.date < $1.date})
+        let sortedViewModels = Array(pricesViewModels.reversed())
         
         if let highlitedPrice = sortedViewModels.first {
             sections.append([highlitedPrice])
-            sections.append(sortedViewModels)
+            
+            // Graph needs values in crescent order
+            sections.append(pricesViewModels)
         }
         
         if sortedViewModels.count > 1 {
             sections.append(Array(sortedViewModels.dropFirst()))
         }
+        
+        reloadDataSubject.onNext(())
     }
 }
 
@@ -54,19 +60,22 @@ extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
     }
     
     func refreshData() {
-        do {
-            try priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: MarketPrices(unit: "USD", prices: [
-                Price(unixTimestamp: 1544054400, value: 7656.995),
-                Price(unixTimestamp: 1544400000, value: 7360.544166666667),
-                Price(unixTimestamp: 1544745600, value: 7307.416666666668),
-                Price(unixTimestamp: 1545091200, value: 7314.758333333335),
-                Price(unixTimestamp: 1545436800, value: 7288.243333333335)
-            ])))
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        reloadDataSubject.onNext(())
+        _ = marketPricesAPI.get()
+            .catch({ [weak self] (error) -> AnyPublisher<MarketPrices, Never> in
+                self?.alertSubject.onNext(AlertViewModel(title: "Falha ao obter novos dados", message: error.localizedDescription, alertActions: []))
+                self?.loadSectionsFromDB()
+                return [].publisher
+                    .eraseToAnyPublisher()
+            })
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] (marketPrices) in
+                do {
+                    try self?.priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: marketPrices))
+                    self?.loadSectionsFromDB()
+                } catch {
+                    self?.alertSubject.onNext(AlertViewModel(title: "Falha ao salvar novos dados", message: error.localizedDescription, alertActions: []))
+                }
+            })
     }
     
     func headerTitle(at section: Int) -> String? {

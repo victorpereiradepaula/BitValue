@@ -23,6 +23,8 @@
 		5C790871239CB5D4005707E4 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790870239CB5D4005707E4 /* AlertViewModel.swift */; };
 		5C790873239CBBE9005707E4 /* PriceDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790872239CBBE9005707E4 /* PriceDBTests.swift */; };
 		5C790875239CBEFC005707E4 /* PriceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790874239CBEFC005707E4 /* PriceViewModelTests.swift */; };
+		5C790877239CCA0D005707E4 /* URLSession+DataTaskPublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790876239CCA0D005707E4 /* URLSession+DataTaskPublisherExtensions.swift */; };
+		5C790879239CCBEF005707E4 /* MarketPricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790878239CCBEF005707E4 /* MarketPricesAPI.swift */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -71,6 +73,8 @@
 		5C790870239CB5D4005707E4 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		5C790872239CBBE9005707E4 /* PriceDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBTests.swift; sourceTree = "<group>"; };
 		5C790874239CBEFC005707E4 /* PriceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModelTests.swift; sourceTree = "<group>"; };
+		5C790876239CCA0D005707E4 /* URLSession+DataTaskPublisherExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+DataTaskPublisherExtensions.swift"; sourceTree = "<group>"; };
+		5C790878239CCBEF005707E4 /* MarketPricesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesAPI.swift; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 		5C79086E239C9683005707E4 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				5C790878239CCBEF005707E4 /* MarketPricesAPI.swift */,
 				5C790869239C95C8005707E4 /* MarketPrices.swift */,
 				5C79086B239C9675005707E4 /* Price.swift */,
 			);
@@ -236,6 +241,7 @@
 				5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */,
 				5CA87E402399E350003B20C7 /* UIColorExtension.swift */,
 				5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */,
+				5C790876239CCA0D005707E4 /* URLSession+DataTaskPublisherExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -495,12 +501,14 @@
 				5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */,
 				5CEE2823239B72C9006C6673 /* PriceDB.swift in Sources */,
 				5CA87E3A2399DED8003B20C7 /* HighlightedPriceTableViewCell.swift in Sources */,
+				5C790879239CCBEF005707E4 /* MarketPricesAPI.swift in Sources */,
 				5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */,
 				5C790871239CB5D4005707E4 /* AlertViewModel.swift in Sources */,
 				5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */,
 				5CA87E432399F0D2003B20C7 /* BaseTableViewCell.swift in Sources */,
 				5CA87E412399E350003B20C7 /* UIColorExtension.swift in Sources */,
 				5CA87E362399DD61003B20C7 /* UITableViewCellExtension.swift in Sources */,
+				5C790877239CCA0D005707E4 /* URLSession+DataTaskPublisherExtensions.swift in Sources */,
 				5CA87E332399D531003B20C7 /* PriceViewModel.swift in Sources */,
 				5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */,
 				5CEE281B239B4434006C6673 /* PriceValueFormatter.swift in Sources */,

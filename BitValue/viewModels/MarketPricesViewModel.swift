@@ -60,7 +60,7 @@ extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
     }
     
     func refreshData() {
-        _ = marketPricesAPI.get()
+        _ = marketPricesAPI.getMarketPrices()
             .catch({ [weak self] (error) -> AnyPublisher<MarketPrices, Never> in
                 self?.alertSubject.onNext(AlertViewModel(title: "Falha ao obter novos dados", message: error.localizedDescription, alertActions: []))
                 self?.loadSectionsFromDB()

@@ -8,9 +8,9 @@
 
 import Charts
 
-public class PriceValueFormatter: NSObject, IAxisValueFormatter {
-    
-    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+final class PriceValueFormatter: NSObject, IAxisValueFormatter {
+
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         String(format: "%.2f", value)
     }
 }

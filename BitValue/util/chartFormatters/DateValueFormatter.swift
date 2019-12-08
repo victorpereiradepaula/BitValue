@@ -8,9 +8,9 @@
 
 import Charts
 
-public class DateValueFormatter: NSObject, IAxisValueFormatter {
+final class DateValueFormatter: NSObject, IAxisValueFormatter {
 
-    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM"
         return dateFormatter.string(from: Date(timeIntervalSince1970: value))

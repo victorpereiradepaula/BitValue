@@ -10,14 +10,38 @@ import Foundation
 
 final class PriceViewModel {
     
-    private let date: Date
+    let date: Date
     let value: Double
     let unit: String
     
+    /**
+        Initializes a PriceViewModel
+
+        - Parameters:
+            - date: Date
+            - value: Double
+            - unit: String ("USD" by default)
+
+        - Returns: PriceViewModel
+     */
     init(date: Date, value: Double, unit: String = "USD") {
         self.date = date
         self.value = value
         self.unit = unit
+    }
+    
+    /**
+            Initializes a PriceViewModel with PriceDB
+
+            - Parameters:
+               - priceDB: PriceDB
+
+            - Returns: PriceViewModel
+     */
+    init(priceDB: PriceDB) {
+        self.date = Date(timeIntervalSince1970: priceDB.unixTimestamp)
+        self.unit = priceDB.unit
+        self.value = priceDB.value
     }
 }
 
@@ -49,5 +73,18 @@ extension PriceViewModel: PriceViewModelProtocol {
     
     var valueString: String {
         String(format: "%.2f", value)
+    }
+}
+
+// MARK: - DB maps
+extension PriceViewModel {
+    
+    private static func map(priceDB: PriceDB) -> PriceViewModel {
+        let date = Date(timeIntervalSince1970: priceDB.unixTimestamp)
+        return PriceViewModel(date: date, value: priceDB.value, unit: priceDB.unit)
+    }
+    
+    static func mapArray(pricesDB: [PriceDB]) -> [PriceViewModel] {
+        pricesDB.compactMap { map(priceDB: $0) }
     }
 }

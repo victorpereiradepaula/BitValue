@@ -12,4 +12,10 @@ struct AlertViewModel: AlertViewModelProtocol {
     let title: String?
     let message: String?
     let alertActions: [UIAlertAction]
+    
+    init(title: String?, message: String?, alertActions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default)]) {
+        self.title = title
+        self.message = message
+        self.alertActions = alertActions
+    }
 }

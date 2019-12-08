@@ -1,6 +1,7 @@
 # BitValue
 
 Aplicativo para consulta da cotação do Bitcoin (valores em USD).
+O aplicativo guarda as cotações dos últimos 7 dias, e as exibe em forma de gráfico e lista.
 
 ## Versões recomendadas*
 - iOS: 13

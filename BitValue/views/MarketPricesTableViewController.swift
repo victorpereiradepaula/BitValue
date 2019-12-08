@@ -10,12 +10,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum ViewState {
+    case loading
+    case `default`
+}
+
 protocol MarketPricesTableViewControllerProtocol {
     
     var sections: [[PriceViewModel]] { get }
     var numberOfSections: Int { get }
     var reloadDataDriver: Driver<Void> { get }
     var alertDriver: Driver<AlertViewModelProtocol?> { get }
+    var viewStateDriver: Driver<ViewState> { get }
     
     func numberOfRows(at section: Int) -> Int
     func headerTitle(at section: Int) -> String?
@@ -27,6 +33,8 @@ final class MarketPricesTableViewController: UITableViewController {
     private let headerHeight: CGFloat = 50
     private let marketPricesViewModel: MarketPricesTableViewControllerProtocol
     private let disposeBag = DisposeBag()
+    
+    private let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
     
     init(marketPricesViewModel: MarketPricesTableViewControllerProtocol) {
         self.marketPricesViewModel = marketPricesViewModel
@@ -52,7 +60,6 @@ final class MarketPricesTableViewController: UITableViewController {
         
         navigationItem.title = "Cotação do Bitcoin"
         
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefreshButton))
         rightBarButtonItem.tintColor = .orange
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -65,6 +72,7 @@ final class MarketPricesTableViewController: UITableViewController {
     }
     
     private func bind() {
+        
         marketPricesViewModel.reloadDataDriver
             .drive(onNext: { [weak self] _ in
                 self?.tableView.reloadData()
@@ -77,6 +85,19 @@ final class MarketPricesTableViewController: UITableViewController {
                 self.showAlert(alertViewModel: alertViewModel)
             })
         .disposed(by: disposeBag)
+        
+        marketPricesViewModel.viewStateDriver
+            .drive(onNext: { [weak self] (viewState) in
+                self?.rightBarButtonItem.isEnabled = viewState != .loading
+            })
+            .disposed(by: disposeBag)
+        
+        rightBarButtonItem.rx.tap
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .bind { [weak self] _ in
+                self?.marketPricesViewModel.refreshData()
+            }
+            .disposed(by: disposeBag)
     }
     
     private func setupHeaderView(at section: Int) -> UIView {
@@ -92,10 +113,6 @@ final class MarketPricesTableViewController: UITableViewController {
 
         headerView.addSubview(titleLabel)
         return headerView
-    }
-    
-    @objc private func didTapRefreshButton() {
-        marketPricesViewModel.refreshData()
     }
 }
 

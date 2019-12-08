@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="HighlightedPriceTableViewCell" customModule="BitValue" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tob-Z2-hKp">
-                        <rect key="frame" x="8" y="4" width="304" height="98"/>
+                        <rect key="frame" x="8" y="2" width="304" height="98"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yd-c4-BhF">
                                 <rect key="frame" x="246" y="53" width="42" height="29"/>
@@ -54,8 +54,8 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="tob-Z2-hKp" secondAttribute="bottom" constant="4" id="N6k-q4-4JI"/>
-                    <constraint firstItem="tob-Z2-hKp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="fNq-b3-en9"/>
+                    <constraint firstAttribute="bottom" secondItem="tob-Z2-hKp" secondAttribute="bottom" constant="2" id="N6k-q4-4JI"/>
+                    <constraint firstItem="tob-Z2-hKp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="fNq-b3-en9"/>
                     <constraint firstAttribute="trailing" secondItem="tob-Z2-hKp" secondAttribute="trailing" constant="8" id="fpU-yH-mdo"/>
                     <constraint firstItem="tob-Z2-hKp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hRK-BM-E5m"/>
                 </constraints>

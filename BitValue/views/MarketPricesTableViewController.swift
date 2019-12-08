@@ -19,7 +19,8 @@ protocol MarketPricesTableViewControllerProtocol {
 
 final class MarketPricesTableViewController: UITableViewController {
     
-    let marketPricesViewModel: MarketPricesTableViewControllerProtocol
+    private let headerHeight: CGFloat = 50
+    private let marketPricesViewModel: MarketPricesTableViewControllerProtocol
     
     init(marketPricesViewModel: MarketPricesTableViewControllerProtocol) {
         self.marketPricesViewModel = marketPricesViewModel
@@ -27,7 +28,7 @@ final class MarketPricesTableViewController: UITableViewController {
     }
     
     required init?(coder: NSCoder) {
-        self.marketPricesViewModel = MarketPricesViewModel(pricesViewModels: [])
+        self.marketPricesViewModel = MarketPricesViewModel()
         super .init(coder: coder)
     }
     
@@ -35,6 +36,14 @@ final class MarketPricesTableViewController: UITableViewController {
         super.viewDidLoad()
         setupNavigationController()
         setupTableView()
+        
+        // MARK: - TODO: adicionar quando não carregar nenhum dado ou em caso de erro
+//        let reloadAction = UIAlertAction(title: "Tentar novamente", style: .default) { [weak self] _ in
+//            self?.reloadData()
+//        }
+//        let okAction = UIAlertAction(title: "OK", style: .cancel)
+//
+//        showAlert(title: "Falha ao carregar os dados", message: "Contate o suporte caso o problema persista.", alertActions: [reloadAction, okAction])
     }
     
     private func setupNavigationController() {
@@ -44,7 +53,7 @@ final class MarketPricesTableViewController: UITableViewController {
         
         navigationItem.title = "Cotação do Bitcoin"
         
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshData))
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reloadData))
         rightBarButtonItem.tintColor = .orange
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -56,18 +65,23 @@ final class MarketPricesTableViewController: UITableViewController {
         tableView.register(UINib(nibName: PriceTableViewCell.nibName, bundle: Bundle(for: PriceTableViewCell.self)), forCellReuseIdentifier: PriceTableViewCell.nibName)
     }
     
-    // MARK: - TODO
-    private func setupTableViewHeader(title: String?) -> UIView {
-        let label = UILabel()
-        label.text = title
-        label.textColor = .orange
-        label.backgroundColor = .black
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        return label
+    private func setupHeaderView(at section: Int) -> UIView {
+        let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: headerHeight))
+        headerView.backgroundColor = .black
+        
+        let labelLeftMargin: CGFloat = 16
+        
+        let titleLabel = UILabel(frame: CGRect(x: labelLeftMargin, y: 0, width: headerView.frame.width - labelLeftMargin, height: headerHeight))
+        titleLabel.textColor = .orange
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        titleLabel.text = marketPricesViewModel.headerTitle(at: section)
+
+        headerView.addSubview(titleLabel)
+        return headerView
     }
     
-    @objc private func refreshData() {
-        
+    @objc private func reloadData() {
+            // MARK: - TODO
     }
 }
 
@@ -75,11 +89,11 @@ final class MarketPricesTableViewController: UITableViewController {
 extension MarketPricesTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return marketPricesViewModel.numberOfSections
+        marketPricesViewModel.numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return marketPricesViewModel.numberOfRows(at: section)
+        marketPricesViewModel.numberOfRows(at: section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,10 +119,12 @@ extension MarketPricesTableViewController {
         }
     }
     
-    // MARK: - TODO
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerTitle = marketPricesViewModel.headerTitle(at: section)
-        return setupTableViewHeader(title: headerTitle)
+        setupHeaderView(at: section)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        headerHeight
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

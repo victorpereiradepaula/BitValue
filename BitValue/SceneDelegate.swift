@@ -20,15 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let marketPricesViewModel = MarketPricesViewModel(pricesViewModels: [
-            PriceViewModel(date: Date(timeIntervalSince1970: 1544054400), value: 7656.995),
-            PriceViewModel(date: Date(timeIntervalSince1970: 1544400000), value: 7360.544166666667),
-            PriceViewModel(date: Date(timeIntervalSince1970: 1544745600), value: 7307.416666666668),
-            PriceViewModel(date: Date(timeIntervalSince1970: 1545091200), value: 7314.758333333335),
-            PriceViewModel(date: Date(timeIntervalSince1970: 1545436800), value: 7288.243333333335)
-        ])
-        
-        window.rootViewController = UINavigationController(rootViewController: MarketPricesTableViewController(marketPricesViewModel: marketPricesViewModel))
+        window.rootViewController = UINavigationController(rootViewController: MarketPricesTableViewController(marketPricesViewModel: MarketPricesViewModel()))
         window.makeKeyAndVisible()
         
         self.window = window

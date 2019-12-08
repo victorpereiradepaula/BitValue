@@ -46,7 +46,7 @@ final class MarketPricesChartTableViewCell: BaseTableViewCell {
             lineChartDataEntry.append(chartDataEntry)
         }
         
-        let lineChartDataSet = LineChartDataSet(entries: lineChartDataEntry, label: "Valor")
+        let lineChartDataSet = LineChartDataSet(entries: lineChartDataEntry, label: "Valor em USD")
         lineChartDataSet.setCircleColor(.clear)
         lineChartDataSet.setColor(.orange)
         lineChartDataSet.valueColors = [.white]

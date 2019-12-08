@@ -18,6 +18,7 @@
 		5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53C239C05030066DBE4 /* PriceDBController.swift */; };
 		5C77B540239C09D90066DBE4 /* PriceDBControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */; };
 		5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */; };
+		5C790868239C9114005707E4 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -61,6 +62,7 @@
 		5C77B53C239C05030066DBE4 /* PriceDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBController.swift; sourceTree = "<group>"; };
 		5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBControllerTests.swift; sourceTree = "<group>"; };
 		5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesViewModel.swift; sourceTree = "<group>"; };
+		5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */,
 				5CA87E402399E350003B20C7 /* UIColorExtension.swift */,
+				5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C790868239C9114005707E4 /* UIViewControllerExtensions.swift in Sources */,
 				5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */,
 				5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */,
 				5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */,

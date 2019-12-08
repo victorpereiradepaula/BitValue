@@ -14,7 +14,7 @@ import RxCocoa
 final class MarketPricesViewModel {
     
     private let marketPricesAPI = MarketPricesAPI()
-    private let priceDBController = PriceDBController()
+    private let viewStateSubject = BehaviorSubject<ViewState>(value: .default)
     private let reloadDataSubject = PublishSubject<Void>()
     private let alertSubject = PublishSubject<AlertViewModelProtocol?>()
     var sections: [[PriceViewModel]] = []
@@ -24,6 +24,7 @@ final class MarketPricesViewModel {
     }
     
     private func loadSectionsFromDB() {
+        let priceDBController = PriceDBController()
         sections = []
         
         let pricesViewModels = PriceViewModel.mapArray(pricesDB: priceDBController.getPricesDB())
@@ -43,9 +44,25 @@ final class MarketPricesViewModel {
         
         reloadDataSubject.onNext(())
     }
+    
+    private func saveOnDB(marketPrices: MarketPrices) {
+        let priceDBController = PriceDBController()
+        do {
+            try priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: marketPrices), completion: { [weak self] () in
+                self?.loadSectionsFromDB()
+            })
+        } catch {
+            alertSubject.onNext(AlertViewModel(title: "Falha ao salvar novos dados", message: error.localizedDescription))
+            loadSectionsFromDB()
+        }
+    }
 }
 
 extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
+    
+    var viewStateDriver: Driver<ViewState> {
+        viewStateSubject.asDriver(onErrorJustReturn: .default)
+    }
     
     var reloadDataDriver: Driver<Void> {
         reloadDataSubject.asDriver(onErrorJustReturn: ())
@@ -60,21 +77,20 @@ extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
     }
     
     func refreshData() {
-        _ = marketPricesAPI.get()
+        viewStateSubject.onNext(.loading)
+        
+        _ = marketPricesAPI.getMarketPrices()
             .catch({ [weak self] (error) -> AnyPublisher<MarketPrices, Never> in
-                self?.alertSubject.onNext(AlertViewModel(title: "Falha ao obter novos dados", message: error.localizedDescription, alertActions: []))
+                self?.alertSubject.onNext(AlertViewModel(title: "Falha ao obter novos dados", message: error.localizedDescription))
                 self?.loadSectionsFromDB()
+                self?.viewStateSubject.onNext(.default)
                 return [].publisher
                     .eraseToAnyPublisher()
             })
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] (marketPrices) in
-                do {
-                    try self?.priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: marketPrices))
-                    self?.loadSectionsFromDB()
-                } catch {
-                    self?.alertSubject.onNext(AlertViewModel(title: "Falha ao salvar novos dados", message: error.localizedDescription, alertActions: []))
-                }
+                self?.saveOnDB(marketPrices: marketPrices)
+                self?.viewStateSubject.onNext(.default)
             })
     }
     

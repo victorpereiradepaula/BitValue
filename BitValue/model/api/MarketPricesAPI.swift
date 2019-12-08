@@ -11,7 +11,7 @@ import Combine
 
 final class MarketPricesAPI {
     
-    func get() -> AnyPublisher<MarketPrices, Error> {
+    func getMarketPrices() -> AnyPublisher<MarketPrices, Error> {
         URLSession.shared.dataTaskPublisher(for: URL(string: "https://api.blockchain.info/charts/market-price?timespan=1week&format=json")!)
             .mapObject(MarketPrices.self)
             .eraseToAnyPublisher()

@@ -12,7 +12,6 @@
 		5C37D013239833A300ED5000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D012239833A300ED5000 /* SceneDelegate.swift */; };
 		5C37D01A239833A500ED5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D019239833A500ED5000 /* Assets.xcassets */; };
 		5C37D01D239833A500ED5000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C37D01B239833A500ED5000 /* LaunchScreen.storyboard */; };
-		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
 		5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */; };
 		5C70CF97239A780400CE2E27 /* MarketPricesChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */; };
 		5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53C239C05030066DBE4 /* PriceDBController.swift */; };
@@ -22,6 +21,8 @@
 		5C79086A239C95C8005707E4 /* MarketPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790869239C95C8005707E4 /* MarketPrices.swift */; };
 		5C79086C239C9675005707E4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C79086B239C9675005707E4 /* Price.swift */; };
 		5C790871239CB5D4005707E4 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790870239CB5D4005707E4 /* AlertViewModel.swift */; };
+		5C790873239CBBE9005707E4 /* PriceDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790872239CBBE9005707E4 /* PriceDBTests.swift */; };
+		5C790875239CBEFC005707E4 /* PriceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790874239CBEFC005707E4 /* PriceViewModelTests.swift */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -58,7 +59,6 @@
 		5C37D01C239833A500ED5000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C37D01E239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C37D023239833A500ED5000 /* BitValueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitValueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C37D027239833A500ED5000 /* BitValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitValueTests.swift; sourceTree = "<group>"; };
 		5C37D029239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesChartTableViewCell.swift; sourceTree = "<group>"; };
 		5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketPricesChartTableViewCell.xib; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		5C790869239C95C8005707E4 /* MarketPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPrices.swift; sourceTree = "<group>"; };
 		5C79086B239C9675005707E4 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		5C790870239CB5D4005707E4 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		5C790872239CBBE9005707E4 /* PriceDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBTests.swift; sourceTree = "<group>"; };
+		5C790874239CBEFC005707E4 /* PriceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewModelTests.swift; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -156,8 +158,9 @@
 		5C37D026239833A500ED5000 /* BitValueTests */ = {
 			isa = PBXGroup;
 			children = (
-				5C37D027239833A500ED5000 /* BitValueTests.swift */,
+				5C790874239CBEFC005707E4 /* PriceViewModelTests.swift */,
 				5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */,
+				5C790872239CBBE9005707E4 /* PriceDBTests.swift */,
 				5C37D029239833A500ED5000 /* Info.plist */,
 			);
 			path = BitValueTests;
@@ -508,8 +511,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */,
+				5C790875239CBEFC005707E4 /* PriceViewModelTests.swift in Sources */,
 				5C77B540239C09D90066DBE4 /* PriceDBControllerTests.swift in Sources */,
+				5C790873239CBBE9005707E4 /* PriceDBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

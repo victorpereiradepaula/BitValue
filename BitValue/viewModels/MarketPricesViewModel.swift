@@ -18,19 +18,6 @@ final class MarketPricesViewModel {
     var sections: [[PriceViewModel]] = []
     
     init() {
-        
-        do {
-            try priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: MarketPrices(unit: "USD", prices: [
-                Price(unixTimestamp: 1544054400, value: 7656.995),
-                Price(unixTimestamp: 1544400000, value: 7360.544166666667),
-                Price(unixTimestamp: 1544745600, value: 7307.416666666668),
-                Price(unixTimestamp: 1545091200, value: 7314.758333333335),
-                Price(unixTimestamp: 1545436800, value: 7288.243333333335)
-            ])))
-        } catch {
-            print(error.localizedDescription)
-        }
-        
         loadSectionsFromDB()
     }
     
@@ -67,7 +54,18 @@ extension MarketPricesViewModel: MarketPricesTableViewControllerProtocol {
     }
     
     func refreshData() {
-        // MARK: - TODO: request
+        do {
+            try priceDBController.addPricesDB(pricesDB: PriceDB.map(marketPrices: MarketPrices(unit: "USD", prices: [
+                Price(unixTimestamp: 1544054400, value: 7656.995),
+                Price(unixTimestamp: 1544400000, value: 7360.544166666667),
+                Price(unixTimestamp: 1544745600, value: 7307.416666666668),
+                Price(unixTimestamp: 1545091200, value: 7314.758333333335),
+                Price(unixTimestamp: 1545436800, value: 7288.243333333335)
+            ])))
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         reloadDataSubject.onNext(())
     }
     

@@ -22,6 +22,7 @@ final class PriceDB: Object {
     }
 }
 
+// MARK: - Map MarketPrices
 extension PriceDB {
     
     static func map(marketPrices: MarketPrices) -> [PriceDB] {
@@ -30,7 +31,7 @@ extension PriceDB {
         
         for price in marketPrices.prices {
             let priceDB = PriceDB()
-            priceDB.unixTimestampString = "\(price.unixTimestamp)"
+            priceDB.unixTimestampString = String(format: "%.0f", price.unixTimestamp)
             priceDB.unixTimestamp = price.unixTimestamp
             priceDB.value = price.value
             priceDB.unit = unit

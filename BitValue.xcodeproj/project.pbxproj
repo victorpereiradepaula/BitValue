@@ -15,6 +15,10 @@
 		5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37D027239833A500ED5000 /* BitValueTests.swift */; };
 		5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */; };
 		5C70CF97239A780400CE2E27 /* MarketPricesChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */; };
+		5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53C239C05030066DBE4 /* PriceDBController.swift */; };
+		5C77B540239C09D90066DBE4 /* PriceDBControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */; };
+		5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */; };
+		5C790868239C9114005707E4 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */; };
 		5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */; };
 		5CA87E292399CFBC003B20C7 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */; };
 		5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */; };
@@ -26,6 +30,7 @@
 		5CA87E432399F0D2003B20C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */; };
 		5CEE281B239B4434006C6673 /* PriceValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE281A239B4434006C6673 /* PriceValueFormatter.swift */; };
 		5CEE281E239B4470006C6673 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE281D239B4470006C6673 /* DateValueFormatter.swift */; };
+		5CEE2823239B72C9006C6673 /* PriceDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE2822239B72C9006C6673 /* PriceDB.swift */; };
 		B62B8D9F8BE537E975ED7E78 /* Pods_BitValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,10 @@
 		5C37D029239833A500ED5000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C70CF94239A780400CE2E27 /* MarketPricesChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesChartTableViewCell.swift; sourceTree = "<group>"; };
 		5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketPricesChartTableViewCell.xib; sourceTree = "<group>"; };
+		5C77B53C239C05030066DBE4 /* PriceDBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBController.swift; sourceTree = "<group>"; };
+		5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDBControllerTests.swift; sourceTree = "<group>"; };
+		5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesViewModel.swift; sourceTree = "<group>"; };
+		5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		5CA87E262399CFBC003B20C7 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		5CA87E272399CFBC003B20C7 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
 		5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPricesTableViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +74,7 @@
 		5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		5CEE281A239B4434006C6673 /* PriceValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceValueFormatter.swift; sourceTree = "<group>"; };
 		5CEE281D239B4470006C6673 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		5CEE2822239B72C9006C6673 /* PriceDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDB.swift; sourceTree = "<group>"; };
 		66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.debug.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A611BDA3F3F8ABA14CA19FBE /* Pods_BitValue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitValue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitValueTests.release.xcconfig"; path = "Target Support Files/Pods-BitValueTests/Pods-BitValueTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,10 +134,10 @@
 		5C37D00F239833A300ED5000 /* BitValue */ = {
 			isa = PBXGroup;
 			children = (
-				5CEE281C239B4455006C6673 /* formatters */,
-				5CA87E3C2399DEFD003B20C7 /* extensions */,
+				5C77B544239C16CD0066DBE4 /* util */,
+				5CEE2821239B72A6006C6673 /* data */,
+				5C77B543239C16AF0066DBE4 /* viewModels */,
 				5CA87E3D2399DF0C003B20C7 /* views */,
-				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
 				5C37D010239833A300ED5000 /* AppDelegate.swift */,
 				5C37D012239833A300ED5000 /* SceneDelegate.swift */,
 				5C37D019239833A500ED5000 /* Assets.xcassets */,
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5C37D027239833A500ED5000 /* BitValueTests.swift */,
+				5C77B53F239C09D90066DBE4 /* PriceDBControllerTests.swift */,
 				5C37D029239833A500ED5000 /* Info.plist */,
 			);
 			path = BitValueTests;
@@ -153,6 +164,24 @@
 				5C70CF95239A780400CE2E27 /* MarketPricesChartTableViewCell.xib */,
 			);
 			path = marketPricesChartCell;
+			sourceTree = "<group>";
+		};
+		5C77B543239C16AF0066DBE4 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5C77B541239C16690066DBE4 /* MarketPricesViewModel.swift */,
+				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		5C77B544239C16CD0066DBE4 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5CA87E3C2399DEFD003B20C7 /* extensions */,
+				5CEE281C239B4455006C6673 /* formatters */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		5CA87E202399CCC4003B20C7 /* priceCell */ = {
@@ -178,6 +207,7 @@
 			children = (
 				5CA87E352399DD61003B20C7 /* UITableViewCellExtension.swift */,
 				5CA87E402399E350003B20C7 /* UIColorExtension.swift */,
+				5C790867239C9114005707E4 /* UIViewControllerExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -186,10 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				5CA87E422399F0D2003B20C7 /* BaseTableViewCell.swift */,
-				5CA87E322399D531003B20C7 /* PriceViewModel.swift */,
 				5CA87E372399DE33003B20C7 /* highlightedPriceCell */,
 				5C70CF8F239A771E00CE2E27 /* marketPricesChartCell */,
 				5CA87E202399CCC4003B20C7 /* priceCell */,
+				5CA87E2E2399D2FC003B20C7 /* MarketPricesTableViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -201,6 +231,15 @@
 				5CEE281D239B4470006C6673 /* DateValueFormatter.swift */,
 			);
 			path = formatters;
+			sourceTree = "<group>";
+		};
+		5CEE2821239B72A6006C6673 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE2822239B72C9006C6673 /* PriceDB.swift */,
+				5C77B53C239C05030066DBE4 /* PriceDBController.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		B13DDB730E7A1286B20E60C3 /* Frameworks */ = {
@@ -224,6 +263,7 @@
 				5C37D00A239833A300ED5000 /* Frameworks */,
 				5C37D00B239833A300ED5000 /* Resources */,
 				654EE73F6154188CC756258E /* [CP] Embed Pods Frameworks */,
+				5CEE2825239BFE77006C6673 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -242,6 +282,7 @@
 				5C37D01F239833A500ED5000 /* Sources */,
 				5C37D020239833A500ED5000 /* Frameworks */,
 				5C37D021239833A500ED5000 /* Resources */,
+				025F0C1248EFFDE68A9A4BD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +355,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		025F0C1248EFFDE68A9A4BD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitValueTests/Pods-BitValueTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitValueTests/Pods-BitValueTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitValueTests/Pods-BitValueTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4A544316AAE4BDEEB2790B5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +393,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5CEE2825239BFE77006C6673 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		654EE73F6154188CC756258E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -382,9 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C790868239C9114005707E4 /* UIViewControllerExtensions.swift in Sources */,
+				5C77B542239C16690066DBE4 /* MarketPricesViewModel.swift in Sources */,
 				5C70CF96239A780400CE2E27 /* MarketPricesChartTableViewCell.swift in Sources */,
 				5CA87E282399CFBC003B20C7 /* PriceTableViewCell.swift in Sources */,
 				5CEE281E239B4470006C6673 /* DateValueFormatter.swift in Sources */,
+				5C77B53D239C05030066DBE4 /* PriceDBController.swift in Sources */,
+				5CEE2823239B72C9006C6673 /* PriceDB.swift in Sources */,
 				5CA87E3A2399DED8003B20C7 /* HighlightedPriceTableViewCell.swift in Sources */,
 				5CA87E302399D2FC003B20C7 /* MarketPricesTableViewController.swift in Sources */,
 				5C37D011239833A300ED5000 /* AppDelegate.swift in Sources */,
@@ -402,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C37D028239833A500ED5000 /* BitValueTests.swift in Sources */,
+				5C77B540239C09D90066DBE4 /* PriceDBControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52C5C5FD04C4C80C9BFD67FC /* Pods-BitValue.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HG6PCH8MC;
@@ -564,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3619E5EA0DB16556F65F5738 /* Pods-BitValue.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HG6PCH8MC;
@@ -583,7 +665,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66B1E98A820884554FCA3912 /* Pods-BitValueTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HG6PCH8MC;
@@ -606,7 +688,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3D0E729716F999C88AB73A2 /* Pods-BitValueTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HG6PCH8MC;

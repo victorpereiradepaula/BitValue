@@ -10,14 +10,38 @@ import Foundation
 
 final class PriceViewModel {
     
-    private let date: Date
+    let date: Date
     let value: Double
     let unit: String
     
+    /**
+        Initializes a PriceViewModel
+
+        - Parameters:
+            - date: Date
+            - value: Double
+            - unit: String ("USD" by default)
+
+        - Returns: PriceViewModel
+     */
     init(date: Date, value: Double, unit: String = "USD") {
         self.date = date
         self.value = value
         self.unit = unit
+    }
+    
+    /**
+            Initializes a PriceViewModel with PriceDB
+
+            - Parameters:
+               - priceDB: PriceDB
+
+            - Returns: PriceViewModel
+     */
+    init(priceDB: PriceDB) {
+        self.date = Date(timeIntervalSince1970: priceDB.unixTimestamp)
+        self.unit = priceDB.unit
+        self.value = priceDB.value
     }
 }
 

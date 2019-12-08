@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="221" id="KGk-i7-Jjw" customClass="MarketPricesChartTableViewCell" customModule="BitValue" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeO-xG-A5I">
-                        <rect key="frame" x="8" y="4" width="304" height="200"/>
+                        <rect key="frame" x="8" y="2" width="304" height="200"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-de-d6B" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="8" y="16" width="288" height="176"/>
@@ -35,9 +35,9 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HeO-xG-A5I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="4QB-cF-62u"/>
+                    <constraint firstItem="HeO-xG-A5I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="4QB-cF-62u"/>
                     <constraint firstItem="HeO-xG-A5I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Nvt-zo-8iZ"/>
-                    <constraint firstAttribute="bottom" secondItem="HeO-xG-A5I" secondAttribute="bottom" constant="4" id="Qy1-Og-Iez"/>
+                    <constraint firstAttribute="bottom" secondItem="HeO-xG-A5I" secondAttribute="bottom" constant="2" id="Qy1-Og-Iez"/>
                     <constraint firstAttribute="trailing" secondItem="HeO-xG-A5I" secondAttribute="trailing" constant="8" id="rS5-cW-aaR"/>
                 </constraints>
             </tableViewCellContentView>

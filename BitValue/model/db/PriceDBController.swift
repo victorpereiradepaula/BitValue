@@ -9,7 +9,8 @@
 import RealmSwift
 
 final class PriceDBController {
-    let realm: Realm
+    
+    private let realm: Realm
     
     init(realm: Realm) {
        self.realm = realm
@@ -19,13 +20,21 @@ final class PriceDBController {
         self.init(realm: try! Realm())
     }
     
-    func addPricesDB(pricesDB: [PriceDB]) throws {
+    func addPricesDB(pricesDB: [PriceDB], completion: (() -> Void)) throws {
+        try removeAllPricesDB()
         try realm.write {
             self.realm.add(pricesDB, update: .modified)
         }
+        completion()
     }
     
     func getPricesDB() -> [PriceDB] {
         Array(realm.objects(PriceDB.self))
+    }
+    
+    private func removeAllPricesDB() throws {
+        try realm.write {
+            self.realm.deleteAll()
+        }
     }
 }

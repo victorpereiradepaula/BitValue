@@ -23,7 +23,7 @@ final class PriceDBController {
     func addPricesDB(pricesDB: [PriceDB], completion: (() -> Void)) throws {
         try removeAllPricesDB()
         try realm.write {
-            self.realm.add(pricesDB, update: .modified)
+            self.realm.add(pricesDB)
         }
         completion()
     }

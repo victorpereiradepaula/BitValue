@@ -75,3 +75,16 @@ extension PriceViewModel: PriceViewModelProtocol {
         String(format: "%.2f", value)
     }
 }
+
+// MARK: - DB maps
+extension PriceViewModel {
+    
+    private static func map(priceDB: PriceDB) -> PriceViewModel {
+        let date = Date(timeIntervalSince1970: priceDB.unixTimestamp)
+        return PriceViewModel(date: date, value: priceDB.value, unit: priceDB.unit)
+    }
+    
+    static func mapArray(pricesDB: [PriceDB]) -> [PriceViewModel] {
+        pricesDB.compactMap { map(priceDB: $0) }
+    }
+}

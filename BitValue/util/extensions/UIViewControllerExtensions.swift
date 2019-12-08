@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol AlertViewModelProtocol {
+    var title: String? { get }
+    var message: String? { get }
+    var alertActions: [UIAlertAction] { get }
+}
+
 extension UIViewController {
 
-    func showAlert(title: String?, message: String?, alertActions: [UIAlertAction]) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    func showAlert(alertViewModel: AlertViewModelProtocol) {
+        let alertController = UIAlertController(title: alertViewModel.title, message: alertViewModel.message, preferredStyle: .alert)
         
-        for alertAction in alertActions {
+        for alertAction in alertViewModel.alertActions {
             alertController.addAction(alertAction)
         }
         

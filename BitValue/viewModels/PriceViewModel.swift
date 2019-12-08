@@ -15,8 +15,8 @@ final class PriceViewModel {
     let unit: String
     
     /**
-        Initializes a PriceViewModel
-
+        Initializes a PriceViewModel, this implements `HighlightedPriceViewModelProtocol`, `PriceChartViewModelProtocol` and `PriceViewModelProtocol`
+     
         - Parameters:
             - date: Date
             - value: Double
@@ -31,12 +31,12 @@ final class PriceViewModel {
     }
     
     /**
-            Initializes a PriceViewModel with PriceDB
+        Initializes a PriceViewModel with PriceDB, this implements `HighlightedPriceViewModelProtocol`, `PriceChartViewModelProtocol` and `PriceViewModelProtocol`
 
-            - Parameters:
-               - priceDB: PriceDB
+        - Parameters:
+            - priceDB: PriceDB
 
-            - Returns: PriceViewModel
+        - Returns: PriceViewModel
      */
     init(priceDB: PriceDB) {
         self.date = Date(timeIntervalSince1970: priceDB.unixTimestamp)

@@ -13,6 +13,16 @@ struct AlertViewModel: AlertViewModelProtocol {
     let message: String?
     let alertActions: [UIAlertAction]
     
+    /**
+     Initializes a AlertViewModel, this implements `AlertViewModelProtocol`
+     
+     - Parameters:
+         - title: String?
+         - message: String?
+         - alertActions: [UIAlertAction] (okAction by default)
+     
+     - Returns: AlertViewModel
+     */
     init(title: String?, message: String?, alertActions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default)]) {
         self.title = title
         self.message = message

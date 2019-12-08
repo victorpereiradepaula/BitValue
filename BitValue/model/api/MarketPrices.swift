@@ -8,5 +8,10 @@
 
 struct MarketPrices: Codable {
     let unit: String
-    let values: [Price]
+    let prices: [Price]
+    
+    enum CodingKeys: String, CodingKey {
+        case unit
+        case prices = "values"
+    }
 }

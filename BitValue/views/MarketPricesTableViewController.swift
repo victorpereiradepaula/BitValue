@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol MarketPricesTableViewControllerProtocol {
     
     var sections: [[PriceViewModel]] { get }
     var numberOfSections: Int { get }
+    var reloadDataDriver: Driver<Void> { get }
+    var alertDriver: Driver<AlertViewModelProtocol?> { get }
     
     func numberOfRows(at section: Int) -> Int
     func headerTitle(at section: Int) -> String?
+    func refreshData()
 }
 
 final class MarketPricesTableViewController: UITableViewController {
     
     private let headerHeight: CGFloat = 50
     private let marketPricesViewModel: MarketPricesTableViewControllerProtocol
+    private let disposeBag = DisposeBag()
     
     init(marketPricesViewModel: MarketPricesTableViewControllerProtocol) {
         self.marketPricesViewModel = marketPricesViewModel
@@ -36,14 +42,7 @@ final class MarketPricesTableViewController: UITableViewController {
         super.viewDidLoad()
         setupNavigationController()
         setupTableView()
-        
-        // MARK: - TODO: adicionar quando não carregar nenhum dado ou em caso de erro
-//        let reloadAction = UIAlertAction(title: "Tentar novamente", style: .default) { [weak self] _ in
-//            self?.reloadData()
-//        }
-//        let okAction = UIAlertAction(title: "OK", style: .cancel)
-//
-//        showAlert(title: "Falha ao carregar os dados", message: "Contate o suporte caso o problema persista.", alertActions: [reloadAction, okAction])
+        bind()
     }
     
     private func setupNavigationController() {
@@ -53,7 +52,7 @@ final class MarketPricesTableViewController: UITableViewController {
         
         navigationItem.title = "Cotação do Bitcoin"
         
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reloadData))
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefreshButton))
         rightBarButtonItem.tintColor = .orange
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -63,6 +62,21 @@ final class MarketPricesTableViewController: UITableViewController {
         tableView.register(UINib(nibName: HighlightedPriceTableViewCell.nibName, bundle: Bundle(for: HighlightedPriceTableViewCell.self)), forCellReuseIdentifier: HighlightedPriceTableViewCell.nibName)
         tableView.register(UINib(nibName: MarketPricesChartTableViewCell.nibName, bundle: Bundle(for: MarketPricesChartTableViewCell.self)), forCellReuseIdentifier: MarketPricesChartTableViewCell.nibName)
         tableView.register(UINib(nibName: PriceTableViewCell.nibName, bundle: Bundle(for: PriceTableViewCell.self)), forCellReuseIdentifier: PriceTableViewCell.nibName)
+    }
+    
+    private func bind() {
+        marketPricesViewModel.reloadDataDriver
+            .drive(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        marketPricesViewModel.alertDriver
+            .drive(onNext: { [weak self] (alertViewModel) in
+                guard let self = self, let alertViewModel = alertViewModel else { return }
+                self.showAlert(alertViewModel: alertViewModel)
+            })
+        .disposed(by: disposeBag)
     }
     
     private func setupHeaderView(at section: Int) -> UIView {
@@ -80,8 +94,8 @@ final class MarketPricesTableViewController: UITableViewController {
         return headerView
     }
     
-    @objc private func reloadData() {
-            // MARK: - TODO
+    @objc private func didTapRefreshButton() {
+        marketPricesViewModel.refreshData()
     }
 }
 

@@ -21,3 +21,23 @@ final class PriceDB: Object {
         return "unixTimestampString"
     }
 }
+
+extension PriceDB {
+    
+    static func map(marketPrices: MarketPrices) -> [PriceDB] {
+        var pricesDB: [PriceDB] = []
+        let unit = marketPrices.unit
+        
+        for price in marketPrices.prices {
+            let priceDB = PriceDB()
+            priceDB.unixTimestampString = "\(price.unixTimestamp)"
+            priceDB.unixTimestamp = price.unixTimestamp
+            priceDB.value = price.value
+            priceDB.unit = unit
+            
+            pricesDB.append(priceDB)
+        }
+        
+        return pricesDB
+    }
+}
